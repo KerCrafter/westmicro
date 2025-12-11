@@ -37,6 +37,26 @@ jobs:
         run: |
           python ./scripts/generate.py
 
+      - name: "Debug: check FORMSPREE_ID presence"
+        run: |
+          if [ -z "${FORMSPREE_ID:-}" ]; then
+            echo "FORMSPREE_ID is not set"
+            exit 1
+          else
+            echo "FORMSPREE_ID is set"
+          fi
+
+      - name: "Debug: inspect generated contact page for Formspree action"
+        run: |
+          if [ -f ./build/contact.html ]; then
+            grep -n "formspree.io" ./build/contact.html || echo "formspree.io not found in contact.html"
+            grep -n "action=" ./build/contact.html | sed -n '1,5p' || true
+          else
+            echo "./build/contact.html not found"
+            ls -la ./build || true
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
