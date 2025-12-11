@@ -28,7 +28,7 @@ jobs:
 
       - name: Build static site
         run: |
-          python .\scripts\generate.py --content content --templates templates --output build
+          python ./scripts/generate.py
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
