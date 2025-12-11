@@ -13,6 +13,8 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     env:
       # inject Formspree ID from repository secrets into the build environment
       FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }}
