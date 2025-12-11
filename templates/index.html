@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+  <div class="container">
+    <h2 class="hero-title">{{ site.headline }}</h2>
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-inner">
+      <img src="static/img/promo-badge.png" alt="Promotion -50%" class="hero-badge" />
+
+      <div class="hero-note">Dépannage informatique à domicile sur Vannes et sa région. Sur rendez-vous, interventions de 9h00 à 18h00. Devis gratuits.</div>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:{{ site.phone|replace(' ', '') }}">Appelez {{ site.phone }}</a>
+        <a class="btn btn-ghost" href="contact.html">Nous contacter</a>
+      </div>
+
+    </div>
+
+    <aside class="hero-map">
+      <div class="map-embed-wrapper" aria-hidden="false">
+        {% if site.google_embed_src %}
+        <iframe src="{{ site.google_embed_src }}" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte West Micro — Fiche Google"></iframe>
+        {% else %}
+        <iframe
+          src="https://www.google.com/maps?q=West%20Micro%20Vannes&z=12&output=embed"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Carte West Micro — Vannes"></iframe>
+        {% endif %}
+      </div>
+      <p class="map-caption">Interventions à Vannes et sa région</p>
+    </aside>
+  </div>
+</section>
+
+<section class="services">
+  <h3>Nos services</h3>
+  <div class="cards">
+    {% for s in services['items'] %}
+    <article class="card">
+      <div class="card-header">
+        <i class="{{ s.icon if s.icon else 'fas fa-tools' }} icon" aria-hidden="true"></i>
+        <h4>{{ s.title }}</h4>
+      </div>
+      {% if s.slug == 'services-personne' %}
+      <img src="static/img/si-service-personne.png" alt="Services à la personne" class="service-detail-image" onerror="this.onerror=null;this.src='static/img/si-service-personne.svg'" />
+      {% endif %}
+      <p class="muted">{{ s.short }}</p>
+      <p>{{ s.description }}</p>
+      
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="benefits">
+  <h3>Pourquoi choisir West Micro ?</h3>
+  <ul class="benefit-list">
+    {% for b in site.benefits %}
+    <li>{{ b }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="mini-contact">
+  <h3>Besoin d'aide maintenant ?</h3>
+  <p>Appelez <strong>{{ site.phone }}</strong> ou <a href="contact.html">envoyez un message</a>.</p>
+</section>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{
+  "title": "West Micro – L'informatique de proximité",
+  "company": "West Micro",
+  "city": "Vannes",
+  "phone": "06 60 30 00 97",
+  "headline": "Dépannage informatique — À domicile",
+  "description": "Dépannage informatique à domicile sur Vannes et sa région. Sur rendez-vous, interventions de 9h00 à 18h00. Devis gratuits.",
+  "service_area": "Vannes et sa région",
+  "hours": "Lun - Ven : 9:00 - 18:00",
+  "benefits": [
+    "Accessible pour les particuliers",
+    "Sans aucune démarche de votre part",
+    "Devis gratuits",
+    "Sauvegarde & récupération de données"
+  ],
+  "logo": "static/img/cropped-cropped-WM-info-prox-500x62.png",
+  "favicon": "https://www.westmicro.bzh/wp-content/uploads/2021/12/cropped-favicon-WM-32x32.png"
+  ,"google_embed_src": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d85983.89029090834!2d-2.73699!3d47.665063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48101ff2a9372c63%3A0xabdc498ce0fd5e45!2sWESTMICRO%20informatique!5e0!3m2!1sfr!2sus!4v1765430190265!5m2!1sfr!2sus"
+}

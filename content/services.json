@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "Dépannage à domicile",
+      "slug": "depannage-domicile",
+      "icon": "fas fa-wrench",
+      "short": "Interventions à domicile sur Vannes et sa région.",
+      "description": "Intervention sur site (sur rendez-vous) pour diagnostics, réparations et assistance. Horaires d'intervention : 9h00 - 18h00 du lundi au vendredi.",
+      "features": ["Intervention à domicile", "Sur rendez-vous", "Devis gratuits"]
+    },
+    {
+      "title": "Réparation Informatique",
+      "slug": "reparation-informatique",
+      "icon": "fas fa-laptop",
+      "short": "Mac & PC — sauvegarde et récupération de données.",
+      "description": "Réparation matérielle et logicielle pour ordinateurs Mac et PC, sauvegarde, récupération de données et optimisation système.",
+      "features": ["Mac & PC", "Sauvegarde & récupération de données", "Diagnostic complet"]
+    },
+    {
+      "title": "Services à la personne",
+      "slug": "services-personne",
+      "icon": "fas fa-user-friends",
+      "short": "Aide informatique à domicile, simplifiée pour les particuliers.",
+      "description": "Accompagnement et installation sans démarche administrative pour les particuliers, prestations adaptées et accessibles.",
+      "features": ["Accessible pour les particuliers", "Sans démarches", "Prestation personnalisée"]
+    }
+  ]
+}
