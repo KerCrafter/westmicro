@@ -36,6 +36,8 @@ jobs:
       - name: Build static site
         run: |
           python ./scripts/generate.py
+        env:
+          FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }}
 
       - name: "Debug: check FORMSPREE_ID presence"
         run: |
